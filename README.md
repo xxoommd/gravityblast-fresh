@@ -11,8 +11,9 @@ If the web framework you are using supports the Fresh runner, it will show build
 - Fix `config` package fail to read last line with EOF.
 
 ## Installation
-
-    go install github.com/xxoommd/fresh@latest
+    git clone https://github.com/xxoommd/gravityblast-fresh.git
+    cd gravityblast-fresh
+    go build -o $GOBIN/fresh
 
 ## Usage
     cd /path/to/myapp
