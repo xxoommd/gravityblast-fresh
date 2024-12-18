@@ -1,23 +1,23 @@
-# Fresh
-
-[![Join the chat at https://gitter.im/pilu/fresh](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pilu/fresh?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/pilu/fresh.svg?branch=master)](https://travis-ci.org/pilu/fresh)
+# Fresh (Fork from: [gravityblast/fresh](https://github.com/gravityblast/fresh))
 
 Fresh is a command line tool that builds and (re)starts your web application everytime you save a Go or template file.
 
 If the web framework you are using supports the Fresh runner, it will show build errors on your browser.
 
-It currently works with [Traffic](https://github.com/pilu/traffic), [Martini](https://github.com/codegangsta/martini) and [gocraft/web](https://github.com/gocraft/web).
+## Fork changes
+- Update [fsnotify](https://github.com/fsnotify/fsnotify) to latest version.
+- Move `runner` and `miniassert` into project.
+- Support passing arguments to the application(by adding `run_args` in `runner.conf`).
+- Fix `config` package fail to read last line with EOF.
 
 ## Installation
 
-    go install github.com/gravityblast/fresh@latest
+    go install github.com/xxoommd/fresh@latest
 
 ## Usage
-
     cd /path/to/myapp
 
-Start fresh:
+Start fresh(make sure GOBIN is in your PATH):
 
     fresh
 
@@ -47,21 +47,4 @@ Here is a sample config file with the default settings:
     log_color_runner:  green
     log_color_watcher: magenta
     log_color_app:
-
-
-## Author
-
-* [Andrea Franz](http://gravityblast.com)
-
-## More
-
-* [Mailing List](https://groups.google.com/d/forum/golang-fresh)
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
+    run_args:
