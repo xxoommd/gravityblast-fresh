@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pilu/config"
+	config "github.com/xxoommd/gravityblast-config"
 )
 
 const (
