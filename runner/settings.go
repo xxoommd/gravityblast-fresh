@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	config "github.com/xxoommd/gravityblast-config"
+	"fresh/config"
 )
 
 const (
